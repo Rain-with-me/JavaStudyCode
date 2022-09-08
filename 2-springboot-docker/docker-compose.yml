@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  luapp:
+    build: .
+    image: luapp
+    ports:
+      - "8081:8081"
