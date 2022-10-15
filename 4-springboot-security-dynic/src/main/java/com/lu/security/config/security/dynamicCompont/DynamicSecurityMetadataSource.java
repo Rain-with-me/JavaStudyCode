@@ -40,6 +40,9 @@ public class DynamicSecurityMetadataSource implements FilterInvocationSecurityMe
         //获取当前访问的路径
         String url = ((FilterInvocation) o).getRequestUrl();
         String path = URLUtil.getPath(url);
+
+        System.out.println("url========>"+url);
+
         PathMatcher pathMatcher = new AntPathMatcher();
         Iterator<String> iterator = configAttributeMap.keySet().iterator();
         //获取访问该路径所需资源
