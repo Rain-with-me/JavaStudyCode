@@ -34,8 +34,12 @@ weixin:
   secret: a1ed9ae66689bbaf50b0e04630ec1472
 
 
+<<<<<<< HEAD
 wx:
   miniapp:
     app-id: wx5bbcac13dbec9fe0
     app-secret: a1ed9ae66689bbaf50b0e04630ec1472
     msgDataFormat: JSON
+=======
+
+>>>>>>> 4c729f1f3c9a5800a2af711ebb631980dbcf3cdc

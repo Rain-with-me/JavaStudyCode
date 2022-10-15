@@ -93,6 +93,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+<<<<<<< HEAD
 
 <!--        微信模块-->
         <dependency>
@@ -100,5 +101,7 @@
             <artifactId>weixin-java-miniapp</artifactId>
             <version>4.4.0</version>
         </dependency>
+=======
+>>>>>>> 4c729f1f3c9a5800a2af711ebb631980dbcf3cdc
     </dependencies>
 </project>
