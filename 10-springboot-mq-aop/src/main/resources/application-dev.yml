@@ -1,0 +1,63 @@
+spring:
+  thymeleaf:
+    servlet:
+      content-type: text/html
+    cache: false
+    suffix: .html
+    prefix: classpath:/template/
+  # rabbitmq
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: manual
+  # qq mail
+  mail:
+    host: smtp.qq.com
+    username: 2110314696@qq.com
+    password: 授权码
+    default-encoding: utf-8
+    port: 587
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.connectiontimeout: 5000
+      mail.smtp.timeout: 5000
+      mail.smtp.writetimeout: 5000
+      mail.smtp.starttls.enabl: true
+  datasource:
+    druid:
+      url: jdbc:mysql://IP地址:3306/invigilate?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 密码(这里没有使用数据库，可以删除)
+      initial-size:  10
+      max-active:  50
+      min-idle:  10
+      max-wait:  60000
+      pool-prepared-statements:  true
+      max-pool-prepared-statement-per-connection-size:  20
+      validation-query:  SELECT 1 FROM DUAL
+      test-on-borrow:  false
+      test-on-return:  false
+      test-while-idle:  true
+      time-between-eviction-runs-millis:  60000
+      webStatFilter:
+        enabled: true
+      statViewServlet:
+        enabled: false
+      filter:
+        stat:
+          enabled: false
+server:
+  port: 8080
+mq:
+  config:
+    log: "log_queue"
+    log-key: "log.router"
+    queue: "mail_queue"
+    exchange: "mail_exchange"
+    router-key: "mail.router"
+
