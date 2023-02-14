@@ -7,5 +7,6 @@
 
 ## 设计模式
 
-- 仓库的10后面里面都有start.md
+- 每个文件里面都有start.md，里面包含所有的使用和介绍
 - 系统学习参考：[设计模式](https://refactoringguru.cn/design-patterns/template-method)
+
