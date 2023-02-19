@@ -23,6 +23,7 @@ public class TestController {
     @Resource
     private RedissonClient redissonClient;
 
+
     @GetMapping("redisson")
     public CommonResult redisson(){
 //        这里直接储存在redis
@@ -37,6 +38,7 @@ public class TestController {
         Date date = new Date();
         String t= "redisson:"+String.valueOf(date);
         System.out.println(t);
+
         RLock lock = redissonClient.getLock(t);
         lock.lock(); //加锁
 
