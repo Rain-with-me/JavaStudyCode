@@ -1,0 +1,46 @@
+spring:
+  # qq mail
+  mail:
+    host: smtp.qq.com
+    username: 2110314696@qq.com
+    password: 密码
+    default-encoding: utf-8
+    port: 587
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.connectiontimeout: 5000
+      mail.smtp.timeout: 5000
+      mail.smtp.writetimeout: 5000
+      mail.smtp.starttls.enabl: true
+  datasource:
+    druid:
+      url: jdbc:mysql://localhost:3306/mall?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&verifyServerCertificate=false&useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456789
+      initial-size:  10
+      max-active:  50
+      min-idle:  10
+      max-wait:  60000
+      pool-prepared-statements:  true
+      max-pool-prepared-statement-per-connection-size:  20
+      validation-query:  SELECT 1 FROM DUAL
+      test-on-borrow:  false
+      test-on-return:  false
+      test-while-idle:  true
+      time-between-eviction-runs-millis:  60000
+      webStatFilter:
+        enabled: true
+      statViewServlet:
+        enabled: false
+      filter:
+        stat:
+          enabled: false
+server:
+  port: 8080
+thread:
+  pool:
+    corePoolSize: 4
+    maxPoolSize: 8
+    workQueue: 25
+    keepAliveTime: 30

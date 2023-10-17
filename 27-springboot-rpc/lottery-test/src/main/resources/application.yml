@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+# Dubbo 广播方式配置
+dubbo:
+  application:
+    name: Lottery
+    version: 1.0.0
+  registry:
+    address: N/A #multicast://224.5.6.7:1234
+  protocol:
+    name: dubbo
+    port: 20880
+  consumer:
+    timeout: 30000
