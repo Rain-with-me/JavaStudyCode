@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    username: root
+    password: mall-123456
+    url: jdbc:mysql://43.138.27.94:3306/lottery-test?useUnicode=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+dubbo:
+  application:
+    name: Lottery
+    version: 1.0.0
+  registry:
+    address: N/A #multicast://224.5.6.7:1234
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.yedean.rpc
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: on   #开启

@@ -1,0 +1,45 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: springboot-mybatis-plus
+  # 数据源配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 阿里的数据库连接池
+    druid:
+      username: root
+      password: 123456789
+      url: jdbc:mysql://localhost:3306/commons_utils?serverTimezone=UTC&useSSL=false&characterEncoding=utf8&serverTimezone=GMT
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    database: 0
+    port: 6379
+    host: 43.138.27.94
+    password: 123456789
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+  mapper-locations: classpath:/mapper/**/*Mapper.xml
+  global-config:
+    db-config:
+      logic-delete-field: flag  # 全局逻辑删除的实体字段名(since 3.3.0,配置后可以忽略不配置步骤2)
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+weixin:
+  appid: wx5bbcac13dbec9fe0
+  secret: a1ed9ae66689bbaf50b0e04630ec1472
+
+
+<<<<<<< HEAD
+wx:
+  miniapp:
+    app-id: wx5bbcac13dbec9fe0
+    app-secret: a1ed9ae66689bbaf50b0e04630ec1472
+    msgDataFormat: JSON
+=======
+
+>>>>>>> 4c729f1f3c9a5800a2af711ebb631980dbcf3cdc
